@@ -1,0 +1,518 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<script src="jquery 3.1.1.js"> </script>
+<style type="text/css">
+
+
+button{
+	    margin: 0 0 0 279px;
+}
+
+.main{
+	width: 1200px;
+	height: 400px;
+	margin: 25px 10px 13px 76px;
+}
+
+.main div {
+  width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.main div img{
+	height: 100%;
+	width: 100%;
+}
+
+.main div{
+	position : relative;
+}
+
+
+button{
+	background-color: #ff4d4d;
+    height: 53px;
+    margin: 17px 15px 0 75px;
+    width: 259px;
+}
+
+</style>
+</head>
+
+<body>
+
+<button id="first">Animation is Fun!! Try it multiple times.</button>
+
+
+<div class= "main">
+
+	<div id="me" style= " z-index:5;"> <img src="images/1.jpg"></div>
+	<div> <img src="images/2.jpg"></div>
+	<div> <img src="images/3.jpg"></div>
+	<div> <img src="images/4.jpg"></div>
+	<div> <img src="images/5.jpg"></div>
+	<div> <img src="images/6.jpg"></div>
+	<div> <img src="images/7.jpg"></div>
+	<div> <img src="images/8.jpg"></div>
+	<div> <img src="images/8.jpg"></div>
+	<div> <img src="images/9.jpg"></div>
+	<div> <img src="images/10.jpg"></div>
+	<div> <img src="images/11.jpg"></div>
+	<div> <img src="images/12.jpg"></div>
+	<div> <img src="images/13.jpg"></div>
+	<div> <img src="images/14.jpg"></div>
+	<div> <img src="images/15.jpg"></div>
+	<div> <img src="images/16.jpg"></div>
+	<div> <img src="images/23.jpg"></div>
+	<div> <img src="images/24.jpg"></div>
+	<div> <img src="images/25.jpg"></div>
+	<div> <img src="images/26.jpg"></div>
+	<div> <img src="images/22.jpg"></div>
+	<div> <img src="images/21.jpg"></div>
+	<div> <img src="images/20.jpg"></div>
+	<div> <img src="images/19.jpg"></div>
+	<div> <img src="images/18.jpg"></div>
+	<div> <img src="images/17.jpg"></div>
+	<div> <img src="images/16.jpg"></div>
+	<div> <img src="images/15.jpg"></div>
+	<div> <img src="images/14.jpg"></div>
+	<div> <img src="images/13.jpg"></div>
+	<div> <img src="images/12.jpg"></div>
+	<div> <img src="images/11.jpg"></div>
+	<div> <img src="images/10.jpg"></div>
+	<div> <img src="images/1.jpg"></div>
+	<div> <img src="images/2.jpg"></div>
+	<div> <img src="images/3.jpg"></div>
+	<div> <img src="images/5.jpg"></div>
+	<div> <img src="images/6.jpg"></div>
+	<div> <img src="images/7.jpg"></div>
+	<div> <img src="images/6.jpg"></div>
+	<div> <img src="images/6.jpg"></div>
+	<div> <img src="images/25.jpg"></div>
+	<div> <img src="images/26.jpg"></div>
+	<div> <img src="images/23.jpg"></div>
+	<div> <img src="images/24.jpg"></div>
+	<div> <img src="images/25.jpg"></div>
+	<div> <img src="images/19.jpg"></div>
+	<div> <img src="images/12.jpg"></div>
+	<div> <img src="images/13.jpg"></div>
+	<div> <img src="images/14.jpg"></div>
+	<div> <img src="images/15.jpg"></div>
+	<div> <img src="images/16.jpg"></div>
+	<div> <img src="images/17.jpg"></div>
+	<div> <img src="images/18.jpg"></div>
+	<div> <img src="images/19.jpg"></div>
+	<div> <img src="images/18.jpg"></div>
+	<div> <img src="images/7.jpg"></div>
+	<div> <img src="images/6.jpg"></div>
+	<div> <img src="images/5.jpg"></div>
+	<div> <img src="images/4.jpg"></div>
+	<div> <img src="images/3.jpg"></div>
+	<div> <img src="images/2.jpg"></div>
+	<div> <img src="images/1.jpg"></div>
+	<div> <img src="images/24.jpg"></div>
+	<div> <img src="images/25.jpg"></div>
+	<div> <img src="images/26.jpg"></div>
+	<div> <img src="images/1.jpg"></div>
+	<div> <img src="images/2.jpg"></div>
+	<div> <img src="images/12.jpg"></div>
+	<div> <img src="images/11.jpg"></div>
+	<div> <img src="images/13.jpg"></div>
+
+
+</div>
+
+
+</body>
+
+
+
+<script type="text/javascript">
+
+var arr1= [];
+var arr2= [];
+
+var array1= []
+var array3= []
+var list= $('.main').children()
+var dataPromise;
+
+
+// $('#second').click(function(){
+  
+//   var me= $('#me')
+//   console.log(me)
+
+//   me.animate({
+//         top: '250px',
+//         left: '250px'
+        
+//         }, 500, function(){
+//         alert()
+        
+//         });
+
+
+// })
+
+//console.log("hii")
+
+$('#first').on('click', function(){
+ // console.log(list)
+  dataToanimate()
+  //alert()
+
+})
+
+
+
+function dataToanimate(){
+ var totalSuffles= getRandomInt(35, 36);
+
+  //console.log("jiii")
+  array1= []
+  array2= []
+
+ var n1;
+ var n2;
+
+ for (var i = 0; i < totalSuffles; i++) {
+ 	
+ 	n1= getRandomInt(0, 71)
+ 	n2= getRandomInt(0, 71)
+      // / alert()
+
+	array1[i]= n1;
+	array2[i]= n2;
+    //array3[i]= n1;
+
+ };
+ var array3 = arrayUnique(array1.concat(array2));
+var half= parseInt((array3.length)/2) 
+    array1 = array3.splice(0, half);
+     if(array1.length< array3.length){
+    	
+    	array3.splice(array3.length-1, 1)
+    }
+  
+    //console.log(array1);
+    //console.log(array3);
+    
+     animateParant(array1, array3)
+
+    
+
+}
+
+
+function animateParant(ar1, ar2){
+
+//ar1.length
+
+
+     for (var i = 0; i < ar1.length ; i++) {
+	 dataPromise = animate(ar1[i], ar2[i])
+	 
+	 dataPromise.then(function(n1, n2){
+	 	
+	 	
+        
+        var e1= $('.main').children().eq(n1)
+        var e2= $('.main').children().eq(n2)
+        
+        //console.log($(e1).css("height"));
+        //console.log(e2);
+        
+        //$(e1).css("left", "30px")
+        
+        first1= $(e1).prop('outerHTML');
+        second2= $(e2).prop('outerHTML');
+        //console.log( );
+        
+        
+        $(e1).replaceWith(second2);
+        $(e2).replaceWith(first1);
+        
+        // /console.log($(e1).css("left"));
+        //console.log($(e2).css("left"));
+        
+        var e11= $('.main').children().eq(n1)
+        var e22= $('.main').children().eq(n2)
+        
+        $(e11).css("left","0px");
+        $(e11).css("top","0px");
+        $(e22).css("left","0px");
+        $(e22).css("top","0px");
+        
+        //console.log($(e11).css("left"));
+        //console.log($(e2).css("left"));
+        
+        //console.log($(e1).css("left"))
+        //console.log($(e2).css("left"))
+        
+        //$(e1).css("left", "0px");
+        //$(e2).css("left", "0px");
+      
+ 	   // $(data1).css({"height": "200px", "top": "0px"});
+ 	   // /  $(data2).css({"height": "200px", "top": "0px"});
+
+ 	//console.log(first1)
+ 	    //$(data2).replaceWith(first1);
+	 	  // /$(data1).css("top", "0px") 	
+	 	  
+	 	  //data1.style.left= '100px';
+     //console.log("We got data: " + data1, data2);
+});
+
+	
+	//console.log("hii")
+};
+
+}
+
+
+function animate(in1, in2){
+
+ var deferred = $.Deferred();
+
+//in1= 2;
+//in2= 3;
+//console.log(in1, "  ", in2)
+
+var row1= ((in1+ 1)/12 +1);
+var temprowInt1= parseInt(row1)
+
+// check last element
+//console.log("row1" +row1)
+// /console.log("temprowInt" +temprowInt1)
+
+if(row1== temprowInt1){
+	row1= temprowInt1-1;
+} else{
+	row1= temprowInt1;
+}
+
+var row2= ((in2+ 1)/12 +1);
+var temprowInt2= parseInt(row2)
+
+// check last element
+//console.log("row2" +row2)
+//console.log("temprowInt2" +temprowInt2)
+
+if(row2== temprowInt2){
+	row2= temprowInt2-1;
+}else{
+	row2= temprowInt2;
+}
+
+
+var column1= ((in1 + 1 )% 12);
+
+if(column1==0){
+	column1= 12;
+}
+
+var column2= ((in2 + 1 )% 12);
+
+//console.log("column2" + column2)
+if(column2 == 0){
+	column2= 12;
+}
+
+// /console.log("column2" + column2)
+//console.log("row1"+ row1)
+
+//console.log()
+//row1= parseInt;
+//column1= ((in1 + 1 )% 12);
+//row2= parseInt((in2+ 1)/12 +1);
+//column2= ((in2 + 1)% 12);
+var flagRow;
+var flagCol;
+
+
+
+rowStep= (row1> row2) ? (row1- row2) : (row2- row1)
+colStep= (column1> column2) ? (column1- column2) : (column2- column1);
+
+flagRow= (row1> row2) ? "minus" : "plus"
+flagCol= (column1> column2) ? "minus" : "plus";
+
+//console.log(in1)
+//console.log(in2)
+//console.log("rowStep"+ rowStep);
+//console.log("colStep" + colStep);
+//alert()
+
+var eme1= $('.main').children().eq(in1)
+var eme2= $('.main').children().eq(in2)
+
+//var eme1= $('.main').children().eq(in1)
+//var eme2= $('.main').children().eq(in2)
+
+
+//eme1.css({'z-index': '10'})
+
+var shiftX= colStep*100;
+var shiftY= rowStep*100;
+
+//console.log(shiftX);
+//console.log(shiftY);
+//console.log("in2"+ in2);
+//console.log("row1: ", row1, "row2----: ", row2)
+//console.log("col1: ", column1, "column2: ", column2)
+
+var properties1 = {}
+ var properties2 = {}
+ //console.log("upper")
+
+
+
+ if(row1<= row2 && column1 <= column2) {
+ 	//console.log("first")
+   properties1 = {left: '+='+shiftX, 
+                   top: '+='+shiftY};
+   properties2 = {left: '-='+shiftX, 
+                   top: '-='+shiftY}
+
+}else if(row1>= row2 && column1 >= column2){
+  // properties = {prop1: value1, prop2: value2};
+  //console.log("second")
+     properties1 = {left: '-='+shiftX, 
+                   top: '-='+shiftY};
+     properties2 = {left: '+='+shiftX, 
+                   top: '+='+shiftY};
+ }else if(row1<= row2 && column1 >= column2){
+  // properties = {prop1: value1, prop2: value2};
+  //alert("in three")
+  //console.log("three")
+     properties2 = {left: '+='+shiftX, 
+                   top: '-='+shiftY};
+     properties1 = {left: '-='+shiftX, 
+                   top: '+='+shiftY};
+ }else if(row1>= row2 && column1 <= column2){
+  // properties = {prop1: value1, prop2: value2};
+  //console.log("four")
+     properties2 = {left: '-='+shiftX, 
+                   top: '+='+shiftY};
+     properties1 = {left: '+='+shiftX, 
+                   top: '-='+shiftY};
+ }
+
+eme1.css({'z-index': '10'})
+eme2.css({'z-index': '10'})
+
+
+//in1= 2;
+//in2= 12;
+
+ // first1= $(eme1).prop('outerHTML');
+ // second2= $(eme2).prop('outerHTML');
+ eme1.animate(properties1, 1000, function(){
+ 	
+ 	//console.log("changed position of 1");
+ 	
+ 	//console.log(second2)
+ 	
+ 	//console.log(first1)
+ 	//console.log(second2)
+ 	
+ 	// deferred.resolve(in1, in2);
+ 	
+
+ 	
+ });
+ //alert()
+ eme2.animate(properties2, 1000, function(){
+ 	
+ 	
+ 	
+
+ 	
+ 	 	
+ 	 
+ 	  deferred.resolve(in1, in2);
+//  	
+ 	// $(eme2).css({"left": "0px", "top": "0px"})
+ 	//console.log("changed position of 2");
+ 	//$(eme2).replaceWith(first1);
+ 	
+ 	
+ });
+//prop= { }
+//  var properties1 = {}
+//  var properties2 = {}
+//  if(flagRow== 'minus' && flagCol=='minus') {
+//    properties1 = {left: '-='+shiftX, 
+//                    top: '-='+shiftY};
+//    properties2 = {left: '+='+shiftX, 
+//                    top: '+='+shiftY};
+                   
+//  }else if(flagRow== 'minus' && flagCol=='plus'){
+//   // properties = {prop1: value1, prop2: value2};
+//      properties1 = {left: '-='+shiftX, 
+//                    top: '+='+shiftY};
+//      properties2 = {left: '+='+shiftX, 
+//                    top: '-='+shiftY};
+//  }else if(flagRow== 'plus' && flagCol=='manus'){
+//   // properties = {prop1: value1, prop2: value2};
+//      properties1 = {left: '+='+shiftX, 
+//                    top: '-='+shiftY};
+//      properties2 = {left: '-='+shiftX, 
+//                    top: '+='+shiftY};
+//  }else if(flagRow== 'plus' && flagCol=='plus'){
+//   // properties = {prop1: value1, prop2: value2};
+//      properties1 = {left: '+='+shiftX, 
+//                    top: '+='+shiftY};
+//      properties2 = {left: '-='+shiftX, 
+//                    top: '-='+shiftY};
+//  }
+
+// console.log(properties1)
+
+// eme1.animate(properties1);
+// eme2.animate(properties2);
+
+// eme2.animate({
+//         top:  '-='+shiftX ,
+//         left: '-='+shiftY
+        
+//         }, 500, function(){
+//         //alert("in main")
+        
+//         });
+
+// /console.log(deferred.promise())
+return deferred.promise();
+
+}
+
+
+
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
+function arrayUnique(array) {
+    var a = array.concat();
+    for(var i=0; i<a.length; ++i) {
+        for(var j=i+1; j<a.length; ++j) {
+            if(a[i] === a[j])
+                a.splice(j--, 1);
+        }
+    }
+    return a;
+   }
+   
+   
+   
+   
+
+</script>
+</html>
