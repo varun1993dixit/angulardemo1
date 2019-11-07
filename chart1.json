@@ -1,12 +1,9 @@
 {
 
-	"data": [{
-			"name": "E",
-			"value": "0.12702"
-		},
-		{
-			"name": "T",
-			"value": "0.09056"
+	data: [{
+			name: "E",
+			value: 0.12702
 		}
+		
 	]
 }
