@@ -1,14 +1,23 @@
 {
     "character": [
         {
-            "name": "varun"
+            "name": "varun",
+             "address":{
+            "name":"11"
+            }
         },
         {
             "name": "kapil",
-            "images": "kapil"
+            "images": "kapil",
+             "address":{
+            "name":"11"
+            }
         },
         {
-            "name": "atul"
+            "name": "atul",
+            "address":{
+            "name":"11"
+            }
         }
     ]
 }
